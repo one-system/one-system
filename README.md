@@ -63,6 +63,18 @@
 - Add npm local packages
   - https://stackoverflow.com/questions/8088795/installing-a-local-module-using-npm
 
+## ROUTING
+
+- https://www.sitepoint.com/component-routing-angular-router/
+
+## AUTHENTICATION
+
+- https://www.sitepoint.com/angular-2-authentication-protecting-private-content/
+
+## REST API
+
+- https://www.sitepoint.com/angular-rxjs-create-api-service-rest-backend/
+
 # ISSUES
 
 - It would be nice, if we could combine WebApplication1 and WebLib and deploy it as one unit, not as two.
@@ -196,3 +208,7 @@ VERIFY IF THE PATHES ARE DEFINED IN tsconfig.json:
       "@onesystem/onesys-portal-azure/*": [
         "dist/onesystem/onesys-portal-azure/*"
       ]
+
+# DEVELOPMENT
+
+ng generate component PageNotFound --project @onesystem/onesys-portal-azure
