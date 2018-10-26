@@ -1,0 +1,47 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "@onesystem/one-sys-core": [
+        "dist/onesystem/one-sys-core"
+      ],
+      "@onesystem/one-sys-core/*": [
+        "dist/onesystem/one-sys-core/*"
+      ],
+      "@onesystem/one-sys-portal-azure": [
+        "dist/onesystem/one-sys-portal-azure"
+      ],
+      "@onesystem/one-sys-portal-azure/*": [
+        "dist/onesystem/one-sys-portal-azure/*"
+      ],
+      "@one-system/one-sys-core": [
+        "dist/one-system/one-sys-core"
+      ],
+      "@one-system/one-sys-core/*": [
+        "dist/one-system/one-sys-core/*"
+      ],
+      "@one-system/one-sys-portal-azure": [
+        "dist/one-system/one-sys-portal-azure"
+      ],
+      "@one-system/one-sys-portal-azure/*": [
+        "dist/one-system/one-sys-portal-azure/*"
+      ]
+    }
+  }
+}

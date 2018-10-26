@@ -1,35 +1,35 @@
 
 # DOCUMENTATION
 
-## @ONESYSTEM/ONESYS
+## @ONE-SYSTEM/ONE-SYS
 
-- @onesystem/onesys-core
+- @one-system/one-sys-core
   - Angular Element Prefix: osc
-  - Is an Angular library within the onesys Angular project
+  - Is an Angular library within the one-sys Angular project
   - No UI
   - Responsible for all one-system core entities and services
   - Entities:
     - Apps 
   - Pack and publish a npm package
 
-- @onesystem/onesys-portal-azure
+- @one-system/one-sys-portal-azure
   - Angular Element Prefix: ospa
-  - Is an Angular library within the onesys Angular project
+  - Is an Angular library within the one-sys Angular project
   - UI similar to Microsoft Azure Portal
   - Responsible for providing base UI components
   - Pack and publish a npm package
 
-- onesys
+- one-sys
   - Is an Angular project
-  - Contains onesys-core
-  - Contains onesys-portal-azure
+  - Contains one-sys-core
+  - Contains one-sys-portal-azure
 
 ## SAMPLE1
 
 - sample-portal-1
   - Is an ASP.NET Core Web Application, with Angular
-  - Includes npm package: onesys-core
-  - Includes npm package: onesys-portal-azure
+  - Includes npm package: one-sys-core
+  - Includes npm package: one-sys-portal-azure
   - Includes npm package: app1
   - Includes npm package: app2
   - Includes nuget package: app1-webapi
@@ -82,38 +82,38 @@
 
 - How can we build and deploy the Angular (ev. Elements) project
 
-# BUILD ONESYS
+# BUILD ONE-SYS
 
 ## CREATE
 
-ng new onesys
-rename onesys to ClientApp
-ng generate library @onesystem/onesys-core --prefix=osc
-ng generate library @onesystem/onesys-portal-azure --prefix=ospa
+ng new one-sys
+rename one-sys ClientApp
+ng generate library @one-system/one-sys-core --prefix=osc
+ng generate library @one-system/one-sys-portal-azure --prefix=ospa
 
 ## PATCH | BUILD | PACK | PUBLISH
 
 ### PATCH
 
-REM RELEASE PATCH: cd projects\onesystem\onesys-core && npm version patch && cd ..\..\..
-REM RELEASE PATCH: cd projects\onesystem\onesys-portal-azure && npm version patch && cd ..\..\..
+REM RELEASE PATCH: cd projects\one-system\one-sys-core && npm version patch && cd ..\..\..
+REM RELEASE PATCH: cd projects\one-system\one-sys-portal-azure && npm version patch && cd ..\..\..
 
 ### BUILD
 
-ng build @onesystem/onesys-core
-ng build @onesystem/onesys-portal-azure
-REM DOES NOT WORK: ng build --prod @onesystem/onesys-core
-REM DOES NOT WORK: ng build --prod @onesystem/onesys-portal-azure
+ng build @one-system/one-sys-core
+ng build @one-system/one-sys-portal-azure
+REM DOES NOT WORK: ng build --prod @one-system/one-sys-core
+REM DOES NOT WORK: ng build --prod @one-system/one-sys-portal-azure
 
 ### PACK
 
-cd dist\onesystem\onesys-core && npm pack && cd ..\..\..
-cd dist\onesystem\onesys-portal-azure && npm pack && cd ..\..\..
+cd dist\one-system\one-sys-core && npm pack && cd ..\..\..
+cd dist\one-system\one-sys-portal-azure && npm pack && cd ..\..\..
 
 ### PUBLISH
 
-REM RELEASE: cd dist\onesystem\onesys-core && npm pack && npm publish && cd ..\..\..
-REM RELEASE: cd dist\onesystem\onesys-portal-azure && npm pack && npm publish && cd ..\..\..
+REM RELEASE: cd dist\one-system\one-sys-core && npm pack && npm publish && cd ..\..\..
+REM RELEASE: cd dist\one-system\one-sys-portal-azure && npm pack && npm publish && cd ..\..\..
 
 # BUILD SAMPLE
 
@@ -152,30 +152,33 @@ ADD TO src\app\app.module.ts
 
 import { App1 } from 'app1';
 import { App1 } from 'app1';
-import { OnesysPortalAzureModule } from '@onesystem/onesys-portal-azure';
+import { OneSysPortalAzureModule } from '@one-system/one-sys-portal-azure';
 
   imports: [
-    OnesysCoreModule,
-    OnesysPortalAzureModule
+    OneSysCoreModule,
+    OneSysPortalAzureModule
   ],
+
+
+ng build sample1
 
 # USING THE LIBRARIES
 
 ## INSTALL PACKAGES FOR DEVOLOPMENT (WITHOUT USING NPMJS.ORG)
 
-npm install ..\..\..\onesys\clientapp\dist\onesystem\onesys-core\onesystem-onesys-core-0.0.1.tgz
-npm install ..\..\..\onesys\clientapp\dist\onesystem\onesys-portal-azure\onesystem-onesys-portal-azure-0.0.1.tgz
+npm install ..\..\..\one-sys\clientapp\dist\one-system\one-sys-core\one-system-one-sys-core-0.0.1.tgz
+npm install ..\..\..\one-sys\clientapp\dist\one-system\one-sys-portal-azure\one-system-one-sys-portal-azure-0.0.1.tgz
 
 ## ADD MODULES
 
 ADD TO src\app\app.module.ts
 
-import { OnesysCoreModule } from '@onesystem/onesys-core';
-import { OnesysPortalAzureModule } from '@onesystem/onesys-portal-azure';
+import { OneSysCoreModule } from '@one-system/one-sys-core';
+import { OneSysPortalAzureModule } from '@one-system/ones-ys-portal-azure';
 
   imports: [
-    OnesysCoreModule,
-    OnesysPortalAzureModule
+    OneSysCoreModule,
+    OneSysPortalAzureModule
   ],
 
 import { App1Module } from 'app1';
@@ -188,27 +191,27 @@ import { App2Module } from 'app2';
 
 ## USE COMPONENTS
 
-<osc-onesys-core></osc-onesys-core>
-<ospa-onesys-portal-azure></ospa-onesys-portal-azure>
+<osc-one-sys-core></osc-one-sys-core>
+<ospa-one-sys-portal-azure></ospa-one-sys-portal-azure>
 
-## TSCONFIG.JSON SETTINGS IN PROJECT ONESYS
+## TSCONFIG.JSON SETTINGS IN PROJECT ONE-SYS
 
 VERIFY IF THE PATHES ARE DEFINED IN tsconfig.json:
 
     "paths": {
-      "@onesystem/onesys-core": [
-        "dist/onesystem/onesys-core"
+      "@one-system/one-sys-core": [
+        "dist/one-system/one-sys-core"
       ],
-      "@onesystem/onesys-core/*": [
-        "dist/onesystem/onesys-core/*"
+      "@one-system/one-sys-core/*": [
+        "dist/one-system/one-sys-core/*"
       ],
-      "@onesystem/onesys-portal-azure": [
-        "dist/onesystem/onesys-portal-azure"
+      "@one-system/one-sys-portal-azure": [
+        "dist/one-system/one-sys-portal-azure"
       ],
-      "@onesystem/onesys-portal-azure/*": [
-        "dist/onesystem/onesys-portal-azure/*"
+      "@one-system/one-sys-portal-azure/*": [
+        "dist/one-system/one-sys-portal-azure/*"
       ]
 
 # DEVELOPMENT
 
-ng generate component PageNotFound --project @onesystem/onesys-portal-azure
+ng generate component PageNotFound --project @one-system/one-sys-portal-azure

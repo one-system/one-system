@@ -4,8 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { OnesysCoreModule } from '@onesystem/onesys-core';
-import { OnesysPortalAzureModule } from '@onesystem/onesys-portal-azure';
+import { OneSysCoreModule } from '@one-system/one-sys-core';
+import { OneSysPortalAzureModule } from '@one-system/one-sys-portal-azure';
+
+import { App1Module } from 'app1';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,10 @@ import { OnesysPortalAzureModule } from '@onesystem/onesys-portal-azure';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OneSysCoreModule,
+    OneSysPortalAzureModule,
+    App1Module
   ],
   providers: [],
   bootstrap: [AppComponent]

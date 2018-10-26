@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { OneSysCoreModule } from '@one-system/one-sys-core';
+import { OneSysPortalAzureModule } from '@one-system/one-sys-portal-azure';
 
 import { App1Module } from 'app1';
 import { App2Module } from 'app2';
@@ -15,6 +17,8 @@ import { App2Module } from 'app2';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    OneSysCoreModule,
+    OneSysPortalAzureModule,
     App1Module,
     App2Module
   ],

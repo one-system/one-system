@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PageNotFoundComponent } from '@onesystem/onesys-portal-azure';
+import { PageNotFoundComponent } from '@one-system/one-sys-portal-azure';
 
 import { AppComponent } from './app.component';
 

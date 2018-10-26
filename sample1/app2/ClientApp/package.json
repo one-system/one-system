@@ -20,6 +20,8 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "@one-system/one-sys-core": "file:../../../one-sys/clientapp/dist/one-system/one-sys-core/one-system-one-sys-core-0.0.1.tgz",
+    "@one-system/one-sys-portal-azure": "file:../../../one-sys/clientapp/dist/one-system/one-sys-portal-azure/one-system-one-sys-portal-azure-0.0.1.tgz",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"

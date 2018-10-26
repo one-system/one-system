@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
     <p>
       app1 works!
     </p>
-    <osc-onesys-core></osc-onesys-core>
-    <ospa-onesys-portal-azure></ospa-onesys-portal-azure>
+    <osc-one-sys-core></osc-one-sys-core>
+    <ospa-one-sys-portal-azure></ospa-one-sys-portal-azure>
+    <p>
+      app1 works!
+    </p>
   `,
   styles: []
 })

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { App1Component } from './app1.component';
 
-import { OnesysCoreModule } from '@onesystem/onesys-core';
-import { OnesysPortalAzureModule } from '@onesystem/onesys-portal-azure';
+import { OneSysCoreModule } from '@one-system/one-sys-core';
+import { OneSysPortalAzureModule } from '@one-system/one-sys-portal-azure';
 
 @NgModule({
   imports: [
-    OnesysCoreModule,
-    OnesysPortalAzureModule
+    OneSysCoreModule,
+    OneSysPortalAzureModule
   ],
   declarations: [App1Component],
   exports: [App1Component]
