@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { OneSysCoreService } from './one-sys-core.service';
+import { AppConfigService } from './app-config.service';
 
-describe('OneSysCoreService', () => {
+describe('AppConfigService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: OneSysCoreService = TestBed.get(OneSysCoreService);
+    const service: AppConfigService = TestBed.get(AppConfigService);
     expect(service).toBeTruthy();
   });
 });

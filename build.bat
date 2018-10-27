@@ -1,9 +1,13 @@
 CD one-sys\ClientApp
 ng build @one-system/one-sys-core
-ng build @one-system/one-sys-portal-azure
 CD dist\one-system\one-sys-core && npm pack && CD ..\..\..
+CD ..\..
+
+CD one-sys\ClientApp
+ng build @one-system/one-sys-portal-azure
 CD dist\one-system\one-sys-portal-azure && npm pack && CD ..\..\..
 CD ..\..
+
 
 CD sample1\app1\ClientApp
 npm install ..\..\..\one-sys\clientapp\dist\one-system\one-sys-core\one-system-one-sys-core-0.0.1.tgz

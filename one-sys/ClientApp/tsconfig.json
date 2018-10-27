@@ -18,18 +18,6 @@
       "dom"
     ],
     "paths": {
-      "@onesystem/one-sys-core": [
-        "dist/onesystem/one-sys-core"
-      ],
-      "@onesystem/one-sys-core/*": [
-        "dist/onesystem/one-sys-core/*"
-      ],
-      "@onesystem/one-sys-portal-azure": [
-        "dist/onesystem/one-sys-portal-azure"
-      ],
-      "@onesystem/one-sys-portal-azure/*": [
-        "dist/onesystem/one-sys-portal-azure/*"
-      ],
       "@one-system/one-sys-core": [
         "dist/one-system/one-sys-core"
       ],

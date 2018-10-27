@@ -1,14 +1,24 @@
 import { NgModule } from '@angular/core';
-import { OneSysPortalAzureComponent } from './one-sys-portal-azure.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CommonModule } from '@angular/common';
+
+import { MainComponent } from './component/main/main.component';
+import { PageNotFoundComponent } from './component/general/page-not-found/page-not-found.component';
+import { SidebarFavoriteComponent } from './component/sidebar/sidebar-favorite/sidebar-favorite.component';
+import { SplashscreenComponent } from './component/general/splashscreen/splashscreen.component';
 
 @NgModule({
   imports: [
+    CommonModule
   ],
   declarations: [
-    OneSysPortalAzureComponent,
-    PageNotFoundComponent
+    MainComponent,
+    PageNotFoundComponent,
+    SidebarFavoriteComponent,
+    SplashscreenComponent,
   ],
-  exports: [OneSysPortalAzureComponent]
+  exports: [
+    MainComponent,
+    PageNotFoundComponent
+  ]
 })
 export class OneSysPortalAzureModule { }

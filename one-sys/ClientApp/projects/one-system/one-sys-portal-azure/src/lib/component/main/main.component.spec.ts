@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OneSysCoreComponent } from './one-sys-core.component';
+import { MainComponent } from './main.component';
 
-describe('OneSysCoreComponent', () => {
-  let component: OneSysCoreComponent;
-  let fixture: ComponentFixture<OneSysCoreComponent>;
+describe('MainComponent', () => {
+  let component: MainComponent;
+  let fixture: ComponentFixture<MainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [OneSysCoreComponent]
+      declarations: [ MainComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OneSysCoreComponent);
+    fixture = TestBed.createComponent(MainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
