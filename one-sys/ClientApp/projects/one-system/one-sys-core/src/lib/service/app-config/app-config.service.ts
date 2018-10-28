@@ -18,9 +18,12 @@ export class AppConfigService {
 
   // #region Properties
 
-  apps: Apps = Apps.create();
-
+  appTitle: string = 'One-System Portal Azure';
   isShowSplashscreen: boolean = true;
+  username: string = 'user@one-system.domain';
+  usernameTenant: string = 'One-System';
+
+  apps: Apps = Apps.create();
 
   // #endregion
 

@@ -1,0 +1,21 @@
+/*
+  TODO: 2018-10-18/hp: Find a way to have this stylesheet distributed with @one-system/one-sys-portal-azure
+*/
+body, html {
+  height: 100%;
+  background-color: #e4e4e4;
+}
+
+body, button, input, p, select, textarea {
+  font-family: az_ea_font,"Segoe UI",wf_segoe-ui_normal,"Segoe WP",Tahoma,Arial,sans-serif;
+  font-weight: 400;
+}
+
+body, fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+}
