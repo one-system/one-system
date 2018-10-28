@@ -1,8 +1,8 @@
-<ul *ngFor="let app of appService.config.apps">
-  <li>
-    <a href="#">
-      <div>icon</div>
-      <div>{{ app.title }}</div>
+<ul class="ospa-sidebar-favorites" *ngFor="let app of appService.config.apps">
+  <li class="ospa-sidebar-item">
+    <a class="ospa-sidebar-item-link" href="#">
+      <div class="ospa-sidebar-icon">icon</div>
+      <div class="ospa-sidebar-label">{{ app.title }}</div>
     </a>
   </li>
 </ul>

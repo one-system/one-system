@@ -145,7 +145,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: normal;
-  max-width: 146px;
+  /*max-width: 146px;*/
+  max-width: 200px;
 }
 
 .ospa-avatarmenu-tenant-image-container {
@@ -168,8 +169,55 @@
   overflow: hidden;
 }
 
-.dropmenu-content {
+.ospa-dropmenu-content {
   display: none;
+}
+
+.ospa-sidebar {
+  z-index: 3;
+  position: relative;
+  height: 100%;
+  font-size: 13px;
+  box-sizing: border-box;
+  font-weight: inherit;
+  display: block;
+}
+
+.ospa-sidebar-bar {
+  width: 225px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  width: 225px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background-color: #323130;
+  color: #fff;
+}
+
+.ospa-sidebar-middle {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  font-size: 100%;
+  font-weight: inherit;
+  display: block;
+  background-color: #323130;
+  color: #fff;
 }
 
 a {

@@ -1,0 +1,92 @@
+.ospa-sidebar-favorites {
+  padding-bottom: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-bottom: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 100%;
+  font-weight: inherit;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.ospa-sidebar-item {
+  font-size: 100%;
+  font-weight: inherit;
+  -webkit-user-drag: element;
+  user-select: none;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.ospa-sidebar-item-link {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  height: 32px;
+  -webkit-user-drag: none;
+  color: inherit;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  height: 32px;
+  -webkit-user-drag: none;
+  color: inherit;
+  color: #015cda;
+  text-decoration: none;
+  font-size: 100%;
+  font-weight: inherit;
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.ospa-sidebar-icon {
+  fill: #fff;
+  -webkit-flex: 0 0 18px;
+  flex: 0 0 18px;
+  height: 18px;
+  padding-left: 15px;
+  -webkit-flex: 0 0 18px;
+  flex: 0 0 18px;
+  height: 18px;
+  padding-left: 15px;
+}
+
+.ospa-sidebar-label {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: hidden;
+  margin-left: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 6px;
+  color: #fff;
+  text-decoration: none;
+}

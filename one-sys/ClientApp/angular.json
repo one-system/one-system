@@ -25,6 +25,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/style/one-system.png",
               "src/style/style.css"
             ],
             "styles": [
