@@ -1,4 +1,4 @@
-# VISUAL HIERARCHY
+﻿# VISUAL HIERARCHY
 
 ## shell
 
@@ -22,6 +22,6 @@
           > blade[] (<select>)
     > portal-contextpane-right (<div>) (style: right)
   > portal-console (<div>)
-> splashscreen (<div>)
+> splash-screen (<div>)
 
 ```

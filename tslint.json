@@ -1,0 +1,6 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "no-inferrable-types": [ false, "ignore-params", "ignore-properties" ]
+  }
+}

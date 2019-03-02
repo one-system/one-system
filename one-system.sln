@@ -1,10 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5AA5918B-AD2D-446B-8F2D-643D4825A8FC}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		build.bat = build.bat
 		dev.bat = dev.bat
 		lint.bat = lint.bat
@@ -12,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 		test-e2e.bat = test-e2e.bat
 		test.bat = test.bat
+		tslint.json = tslint.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample1", "sample1", "{5454377B-8B60-4DE4-8CBB-7FC1493A900A}"
