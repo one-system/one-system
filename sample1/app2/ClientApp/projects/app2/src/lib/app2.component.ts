@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
     <p>
       app2 works!
     </p>
-    <osc-one-sys-core></osc-one-sys-core>
-    <ospa-one-sys-portal-azure></ospa-one-sys-portal-azure>
+    <!--<osc-one-sys-core></osc-one-sys-core>-->
+    <!--<ospa-one-sys-portal-azure></ospa-one-sys-portal-azure>-->
     <p>
       app2 works!
     </p>

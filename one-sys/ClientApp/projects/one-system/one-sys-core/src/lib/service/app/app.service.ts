@@ -1,35 +1,28 @@
-// #region Imports
-
-import { Injectable, Optional } from '@angular/core';
+﻿import { Injectable, Optional } from '@angular/core';
 
 import { AppConfigService } from '../app-config/app-config.service';
-import { Apps } from '../../domain/apps';
-
-// #endregion
 
 @Injectable({
-  providedIn: 'root' // singleton: should be provided in the application root
+    providedIn: 'root' // singleton: should be provided in the application root
 })
 export class AppService {
-  // #region Constructors
+    // #region Constructors
 
-  constructor(@Optional() config: AppConfigService) {
-    if (config) {
-      this.config = config;
+    constructor(@Optional() appConfigService: AppConfigService) {
+        if (appConfigService) {
+            this.appConfigService = appConfigService;
+        }
     }
-  }
 
-  // #endregion
+    // #endregion
 
-  // #region Properties
+    // #region Properties
 
-  config: AppConfigService;
+    appConfigService: AppConfigService;
 
-  // #endregion
+    // #endregion
 
-  // #region Public Methods
+    // #region Public Methods
 
-  // #endregion
-
-  // #endregion
+    // #endregion
 }

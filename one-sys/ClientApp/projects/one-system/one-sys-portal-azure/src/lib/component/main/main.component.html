@@ -1,69 +1,80 @@
-<div class="ospa-shell">
-  <div class="ospa-portal">
-    <div class="ospa-topbar">
-      <div class="ospa-topbar-exit-customize"></div>
-      <div class="ospa-topbar-content">
-        <h1 class="ospa-topbar-brand">
-          <a class="ospa-topbar-home">{{appService.config.appTitle}}</a>
-        </h1>
-        <div class="ospa-topbar-placeholder"></div>
-        <div class="ospa-topbar-search"></div>
-        <div class="ospa-topbar-buttons"></div>
-        <div class="ospa-topbar-actionsmenu"></div>
-        <div class="ospa-topbar-avatarmenu">
-          <div class="ospa-dropmenu">
-            <button class="ospa-dropmenu-button">
-              <div class="ospa-avatarmenu-tenant-container">
-                <div class="ospa-avatarmenu-username">{{appService.config.username}}</div>
-                <div class="ospa-avatarmenu-tenant">{{appService.config.usernameTenant}}</div>
-              </div>
-              <div class="ospa-avatarmenu-tenant-image-container">
-                <img class="ospa-avatarmenu-tenant-image" alt="" src="https://portal.azure.com/Content/static/MsPortalImpl/AvatarMenu/AvatarMenu_defaultAvatarSmall.png">
-              </div>
-            </button>
-            <button class="ospa-dropmenu-button"></button>
-          </div>
+﻿<div class="ospa-shell">
+    <div class="ospa-portal">
+        <div class="ospa-topbar">
+            <div class="ospa-topbar-exit-customize"></div>
+            <div class="ospa-topbar-content">
+                <h1 class="ospa-topbar-brand">
+                    <!-- Application Title -->
+                    <a class="ospa-topbar-home">{{appService.appConfigService.appConfig.appTitle}}</a>
+                </h1>
+                <div class="ospa-topbar-placeholder"></div>
+                <div class="ospa-topbar-search"></div>
+                <div class="ospa-topbar-buttons"></div>
+                <div class="ospa-topbar-actionsmenu"></div>
+                <div class="ospa-topbar-avatarmenu">
+                    <div class="ospa-dropmenu">
+                        <button class="ospa-dropmenu-button">
+                            <div class="ospa-avatarmenu-tenant-container">
+                                <!-- Username -->
+                                <div class="ospa-avatarmenu-username">{{appService.appConfigService.appConfig.username}}</div>
+                                <div class="ospa-avatarmenu-tenant">{{appService.appConfigService.appConfig.usernameTenant}}</div>
+                            </div>
+                            <div class="ospa-avatarmenu-tenant-image-container">
+                                <img class="ospa-avatarmenu-tenant-image" alt="" src="https://portal.azure.com/Content/static/MsPortalImpl/AvatarMenu/AvatarMenu_defaultAvatarSmall.png">
+                            </div>
+                        </button>
+                        <button class="ospa-dropmenu-button"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="ospa-dashboard"></div>
+            <div class="ospa-loading5dots"></div>
         </div>
-      </div>
-      <div class="ospa-dashboard"></div>
-      <div class="ospa-loading5dots"></div>
+        <div class="ospa-portal-tip"></div>
+        <div class="ospa-portal-main">
+            <!-- Sidebar -->
+            <div class="ospa-sidebar" [style.display]="appService.appConfigService.appConfig.sidebar.isVisible ? 'block' : 'none'">
+                <nav class="ospa-sidebar-bar">
+                    <div class="ospa-sidebar-top"></div>
+                    <div class="ospa-sidebar-favorites-section"></div>
+                    <div class="ospa-sidebar-middle">
+                        <ospa-sidebar-favorite></ospa-sidebar-favorite>
+                    </div>
+                    <div class="ospa-sidebar-shadow"></div>
+                </nav>
+            </div>
+            <div class="ospa-portal-contextpane-left"></div>
+            <main class="ospa-portal-content ospa-panorama">
+                <!-- Dashboard - fix width, fix height layout -->
+                <div class="ospa-startboard" [style.display]="appService.appConfigService.appConfig.appboard.isVisible ? 'block' : 'none'">
+                    <div class="ospa-startboard-loadanimation"></div>
+                    <div class="ospa-startboard-header"></div>
+                    <div class="ospa-startboard-filter"></div>
+                    <div class="ospa-startboard-layout">
+                        <div class="ospa-flowlayout-childcontainer">
+                            <ospa-appboard></ospa-appboard>
+                            <!-- Tiles -->
+                        </div>
+                    </div>
+                    <div class="ospa-startboard-message"></div>
+                </div>
+                <!-- Fix width, dynamic height layout -->
+                <div class="ospa-home-target"></div>
+                <!-- Dynamic width, fix height layout -->
+                <div class="ospa-journey">
+                    <div class="ospa-journey-breadcrumb"></div>
+                    <div class="ospa-journey-layout">
+                        <select>
+                            <!-- blades -->
+                        </select>
+                    </div>
+                </div>
+            </main>
+            <div class="ospa-portal-contextpane-right"></div>
+        </div>
+        <div class="ospa-portal-console"></div>
+        <div class="ospa-accessible-label"></div>
+        <div class="ospa-commands-contextMenu"></div>
     </div>
-    <div class="ospa-portal-tip"></div>
-    <div class="ospa-portal-main">
-      <div class="ospa-sidebar">
-        <nav class="ospa-sidebar-bar">
-          <div class="ospa-sidebar-top"></div>
-          <div class="ospa-sidebar-favorites-section"></div>
-          <div class="ospa-sidebar-middle">
-            <!-- ospa-sidebar-favorite -->
-            <ospa-sidebar-favorite></ospa-sidebar-favorite>
-          </div>
-          <div class="ospa-sidebar-shadow"></div>
-        </nav>
-      </div>
-      <div class="ospa-portal-contextpane-left"></div>
-      <main class="ospa-portal-content ospa-panorama">
-        <div class="ospa-startboard">
-          <div class="ospa-startboard-loadanimation"></div>
-          <div class="ospa-startboard-header"></div>
-          <div class="ospa-startboard-filter"></div>
-          <div class="ospa-startboard-layout"></div>
-          <div class="ospa-startboard-message"></div>
-        </div>
-        <div class="ospa-journey">
-          <div class="ospa-journey-breadcrumb"></div>
-          <div class="ospa-journey-layout">
-            <select>
-              <!-- blades -->
-            </select>
-          </div>
-        </div>
-      </main>
-      <div class="ospa-portal-contextpane-right"></div>
-    </div>
-    <div class="ospa-portal-console"></div>
-    <div class="ospa-accessible-label"></div>
-    <div class="ospa-commands-contextMenu"></div>
-  </div>
-  <ospa-splashscreen class="ospa-splashscreen"></ospa-splashscreen>
+    <ospa-splash-screen class="ospa-splash-screen"></ospa-splash-screen>
 </div>

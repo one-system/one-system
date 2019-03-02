@@ -1,35 +1,23 @@
-// #region Imports
-
-import { Injectable } from '@angular/core';
-import { Apps } from '../../domain/apps';
-
-// #endregion
+﻿import { Injectable, Inject } from '@angular/core';
+import { AppConfig } from '../../domain/app-config';
 
 @Injectable({
-  providedIn: 'root' // singleton: should be provided in the application root
+    providedIn: 'root' // singleton: should be provided in the application root
 })
 export class AppConfigService {
-  // #region Constructors
+    // #region Constructors
 
-  constructor() {
-  }
+    constructor(public appConfig: AppConfig) {
+        console.log(this.appConfig);
+    }
 
-  // #endregion
+    // #endregion
 
-  // #region Properties
+    // #region Properties
 
-  appTitle: string = 'One-System Portal Azure';
-  isShowSplashscreen: boolean = true;
-  username: string = 'user@one-system.domain';
-  usernameTenant: string = 'One-System';
+    // #endregion
 
-  apps: Apps = Apps.create();
+    // #region Public Methods
 
-  // #endregion
-
-  // #region Public Methods
-
-  // #endregion
-
-  // #endregion
+    // #endregion
 }

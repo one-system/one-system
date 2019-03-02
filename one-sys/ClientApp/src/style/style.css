@@ -1,9 +1,9 @@
-/*
+﻿/*
   TODO: 2018-10-18/hp: Find a way to have this stylesheet distributed with @one-system/one-sys-portal-azure
 */
 body, html {
   height: 100%;
-  background-color: #e4e4e4;
+  background-color: #fff;
 }
 
 body, button, input, p, select, textarea {

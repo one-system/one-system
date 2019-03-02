@@ -1,3 +1,26 @@
+﻿# PATCH | BUILD | PACK | PUBLISH
+
+## PATCH
+
+REM RELEASE PATCH: cd projects\one-system\one-sys-core && npm version patch && cd ..\..\..
+REM RELEASE PATCH: cd projects\one-system\one-sys-portal-azure && npm version patch && cd ..\..\..
+
+## BUILD
+
+ng build @one-system/one-sys-core
+ng build @one-system/one-sys-portal-azure
+REM DOES NOT WORK: ng build --prod @one-system/one-sys-core
+REM DOES NOT WORK: ng build --prod @one-system/one-sys-portal-azure
+
+## PACK
+
+cd dist\one-system\one-sys-core && npm pack && cd ..\..\..
+cd dist\one-system\one-sys-portal-azure && npm pack && cd ..\..\..
+
+## PUBLISH
+
+REM RELEASE: cd dist\one-system\one-sys-core && npm pack && npm publish && cd ..\..\..
+REM RELEASE: cd dist\one-system\one-sys-portal-azure && npm pack && npm publish && cd ..\..\..
 
 # DOCUMENTATION
 
@@ -90,30 +113,6 @@ ng new one-sys
 rename one-sys ClientApp
 ng generate library @one-system/one-sys-core --prefix=osc
 ng generate library @one-system/one-sys-portal-azure --prefix=ospa
-
-## PATCH | BUILD | PACK | PUBLISH
-
-### PATCH
-
-REM RELEASE PATCH: cd projects\one-system\one-sys-core && npm version patch && cd ..\..\..
-REM RELEASE PATCH: cd projects\one-system\one-sys-portal-azure && npm version patch && cd ..\..\..
-
-### BUILD
-
-ng build @one-system/one-sys-core
-ng build @one-system/one-sys-portal-azure
-REM DOES NOT WORK: ng build --prod @one-system/one-sys-core
-REM DOES NOT WORK: ng build --prod @one-system/one-sys-portal-azure
-
-### PACK
-
-cd dist\one-system\one-sys-core && npm pack && cd ..\..\..
-cd dist\one-system\one-sys-portal-azure && npm pack && cd ..\..\..
-
-### PUBLISH
-
-REM RELEASE: cd dist\one-system\one-sys-core && npm pack && npm publish && cd ..\..\..
-REM RELEASE: cd dist\one-system\one-sys-portal-azure && npm pack && npm publish && cd ..\..\..
 
 # BUILD SAMPLE
 
