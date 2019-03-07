@@ -1,14 +1,8 @@
-﻿import { Sidebar } from "./sidebar/sidebar";
-import { Appboard } from "./dashboard/appboard/appboard";
+﻿import { Appboard } from "./dashboard/appboard/appboard";
+import { Blades } from "./blade/blades";
+import { Sidebar } from "./sidebar/sidebar";
 
 export class AppConfig {
-    // #region Constructors
-
-    constructor() {
-    }
-
-    // #endregion
-
     // #region Properties
 
     appTitle: string = 'One-System Portal Azure';
@@ -16,8 +10,16 @@ export class AppConfig {
     username: string = 'user@one-system.domain';
     usernameTenant: string = 'One-System';
 
-    sidebar: Sidebar = Sidebar.create();
     appboard: Appboard = Appboard.create();
+    blades: Blades = Appboard.create();
+    sidebar: Sidebar = Sidebar.create();
+
+    // #endregion
+
+    // #region Constructors
+
+    constructor() {
+    }
 
     // #endregion
 

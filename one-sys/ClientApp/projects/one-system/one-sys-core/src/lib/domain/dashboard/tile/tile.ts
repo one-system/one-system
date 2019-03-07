@@ -1,22 +1,10 @@
-﻿import { MainService } from '../../../service/main/main.service';
+﻿//import { MainService } from '../../../service/main/main.service';
 import { TileSizes } from './tile-sizes';
 
 export class Tile {
-    // #region Constructors
-
-    constructor(mainService: MainService, title: string, bladePath: string) {
-        this.mainService = mainService;
-
-        this.title = title;
-        this.bladePath = bladePath;
-        this.tileSize = TileSizes.normal;
-    }
-
-    // #endregion
-
     // #region Properties
 
-    mainService: MainService;
+    //mainService: MainService;
 
     title: string;
     subTitle: string;
@@ -39,10 +27,23 @@ export class Tile {
 
     // #endregion
 
+    // #region Constructors
+
+    // mainService: MainService, 
+    constructor(title: string, bladePath: string) {
+        //this.mainService = mainService;
+
+        this.title = title;
+        this.bladePath = bladePath;
+        this.tileSize = TileSizes.normal;
+    }
+
+    // #endregion
+
     // #region Public Methods
 
     clicked() {
-        this.mainService.areaBlades.setFirstBlade(this.bladePath);
+        //this.mainService.areaBlades.setFirstBlade(this.bladePath);
     }
 
     // #endregion

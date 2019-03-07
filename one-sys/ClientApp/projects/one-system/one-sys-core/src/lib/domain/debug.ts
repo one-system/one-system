@@ -1,16 +1,16 @@
-﻿import { MainService } from '../service/main/main.service';
+﻿//import { MainService } from '../service/main/main.service';
 
 export class Debug {
-    // #region Constructors
-
-    // #endregion
-
     // #region Properties
 
     static isEnabled: boolean = false;
     static isWithObjects: boolean = false;
 
     static keys: Array<string> = new Array<string>();
+
+    // #endregion
+
+    // #region Constructors
 
     // #endregion
 
@@ -38,11 +38,9 @@ export class Debug {
     static write(debugLine: string, objects?: Array<any>): boolean {
         if ((Debug.isEnabled && Debug.keys.length === 0)
             || (Debug.isEnabled && Debug.isInKeys(debugLine))) {
-            console.log(debugLine);
 
             if (objects !== undefined && Debug.isWithObjects) {
                 objects.forEach((item) => {
-                    console.log(item);
                 });
             }
             return true;

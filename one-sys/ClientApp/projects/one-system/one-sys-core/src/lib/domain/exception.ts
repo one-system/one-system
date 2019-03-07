@@ -1,10 +1,6 @@
 ﻿import { ExceptionDotNetEntityValidations } from './exception-dotnet-entity-validation';
 
 export class Exception extends ExceptionDotNetEntityValidations {
-    // #region Constructors
-
-    // #endregion
-
     // #region Properties
 
     // HTTP Server
@@ -14,6 +10,10 @@ export class Exception extends ExceptionDotNetEntityValidations {
     Status: number | undefined;
     StatusText: string | undefined;
     Url: string;
+
+    // #endregion
+
+    // #region Constructors
 
     // #endregion
 

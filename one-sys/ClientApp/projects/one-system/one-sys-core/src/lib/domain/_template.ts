@@ -1,14 +1,15 @@
-﻿import { MainService } from '../service/main/main.service';
+﻿//import { MainService } from '../service/main/main.service';
 
 export class AvatarMenu {
-    // #region Constructors
-
-    constructor(public mainService: MainService) {
-    }
+    // #region Properties
 
     // #endregion
 
-    // #region Properties
+    // #region Constructors
+
+    // public mainService: MainService
+    constructor() {
+    }
 
     // #endregion
 

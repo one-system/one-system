@@ -1,16 +1,17 @@
-﻿import { MainService } from '../service/main/main.service';
+﻿//import { MainService } from '../service/main/main.service';
 import { UserControlBase } from './base/user-control-base';
 
 export class AvatarMenu extends UserControlBase {
-  // #region Constructors
-
-  constructor(public mainService: MainService) {
-    super(mainService);
-  }
+  // #region Properties
 
   // #endregion
 
-  // #region Properties
+  // #region Constructors
+
+    // public mainService: MainService
+  constructor() {
+    super();
+  }
 
   // #endregion
 

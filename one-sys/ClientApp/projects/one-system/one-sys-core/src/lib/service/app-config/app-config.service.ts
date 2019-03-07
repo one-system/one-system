@@ -5,15 +5,14 @@ import { AppConfig } from '../../domain/app-config';
     providedIn: 'root' // singleton: should be provided in the application root
 })
 export class AppConfigService {
-    // #region Constructors
-
-    constructor(public appConfig: AppConfig) {
-        console.log(this.appConfig);
-    }
+    // #region Properties
 
     // #endregion
 
-    // #region Properties
+    // #region Constructors
+
+    constructor(public appConfig: AppConfig) {
+    }
 
     // #endregion
 

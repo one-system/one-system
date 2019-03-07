@@ -1,6 +1,12 @@
 ﻿import { SidebarEntry } from './sidebar-entry';
 
 export class Sidebar extends Array<SidebarEntry> {
+    // #region Properties
+
+    isVisible: boolean = true;
+
+    // #endregion
+
     // #region Constructors
 
     private constructor(sidebarEntries?: Array<SidebarEntry>) {
@@ -10,12 +16,6 @@ export class Sidebar extends Array<SidebarEntry> {
     static create<Sidebars>(): Sidebars {
         return Object.create(Sidebar.prototype);
     }
-
-    // #endregion
-
-    // #region Properties
-
-    isVisible: boolean = true;
 
     // #endregion
 

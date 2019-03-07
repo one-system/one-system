@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 
-import { AppService } from '@one-system/one-sys-core';
+import { MainOscService } from '@one-system/one-sys-core';
 
 @Component({
     selector: 'ospa-sidebar-favorite',
@@ -8,7 +8,8 @@ import { AppService } from '@one-system/one-sys-core';
     styleUrls: ['./sidebar-favorite.component.scss']
 })
 export class SidebarFavoriteComponent implements OnInit {
-    constructor(public appService: AppService) { }
+    constructor(public mainOscService: MainOscService) {
+    }
 
     ngOnInit() {
     }

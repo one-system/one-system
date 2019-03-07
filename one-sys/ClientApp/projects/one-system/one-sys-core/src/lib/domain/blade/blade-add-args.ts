@@ -1,12 +1,12 @@
 ﻿export class BladeAddArgs {
-    // #region Constructors
-
-    // #endregion
-
     // #region Properties
 
     path: string;
     pathSender: string;
+
+    // #endregion
+
+    // #region Constructors
 
     // #endregion
 

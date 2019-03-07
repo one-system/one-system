@@ -1,11 +1,16 @@
-﻿import { MainService } from '../service/main/main.service';
+﻿//import { MainService } from '../service/main/main.service';
 import { Panorama } from './panorama';
 
 export class PortalShell {
+    // #region Properties
+
+    // #endregion
+
     // #region Constructors
 
-    constructor(mainService: MainService) {
-        mainService.panorama = new Panorama(mainService);
+    // mainService: MainService
+    constructor() {
+        //mainService.panorama = new Panorama(mainService);
 
         //if (title === '' || title === null || title === undefined) {
         //    mainService.panorama.title = mainService.browserWindowService.browserWindow.location.hostname.toLowerCase();
@@ -13,10 +18,6 @@ export class PortalShell {
         //    mainService.panorama.title = title;
         //}
     }
-
-    // #endregion
-
-    // #region Properties
 
     // #endregion
 

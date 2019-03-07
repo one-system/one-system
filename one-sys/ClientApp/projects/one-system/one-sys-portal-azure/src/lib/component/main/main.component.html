@@ -5,7 +5,7 @@
             <div class="ospa-topbar-content">
                 <h1 class="ospa-topbar-brand">
                     <!-- Application Title -->
-                    <a class="ospa-topbar-home">{{appService.appConfigService.appConfig.appTitle}}</a>
+                    <a class="ospa-topbar-home">{{mainOscService.appConfigService.appConfig.appTitle}}</a>
                 </h1>
                 <div class="ospa-topbar-placeholder"></div>
                 <div class="ospa-topbar-search"></div>
@@ -16,8 +16,8 @@
                         <button class="ospa-dropmenu-button">
                             <div class="ospa-avatarmenu-tenant-container">
                                 <!-- Username -->
-                                <div class="ospa-avatarmenu-username">{{appService.appConfigService.appConfig.username}}</div>
-                                <div class="ospa-avatarmenu-tenant">{{appService.appConfigService.appConfig.usernameTenant}}</div>
+                                <div class="ospa-avatarmenu-username">{{mainOscService.appConfigService.appConfig.username}}</div>
+                                <div class="ospa-avatarmenu-tenant">{{mainOscService.appConfigService.appConfig.usernameTenant}}</div>
                             </div>
                             <div class="ospa-avatarmenu-tenant-image-container">
                                 <img class="ospa-avatarmenu-tenant-image" alt="" src="https://portal.azure.com/Content/static/MsPortalImpl/AvatarMenu/AvatarMenu_defaultAvatarSmall.png">
@@ -33,7 +33,7 @@
         <div class="ospa-portal-tip"></div>
         <div class="ospa-portal-main">
             <!-- Sidebar -->
-            <div class="ospa-sidebar" [style.display]="appService.appConfigService.appConfig.sidebar.isVisible ? 'block' : 'none'">
+            <div class="ospa-sidebar" [style.display]="mainOscService.appConfigService.appConfig.sidebar.isVisible ? 'block' : 'none'">
                 <nav class="ospa-sidebar-bar">
                     <div class="ospa-sidebar-top"></div>
                     <div class="ospa-sidebar-favorites-section"></div>
@@ -46,14 +46,14 @@
             <div class="ospa-portal-contextpane-left"></div>
             <main class="ospa-portal-content ospa-panorama">
                 <!-- Dashboard - fix width, fix height layout -->
-                <div class="ospa-startboard" [style.display]="appService.appConfigService.appConfig.appboard.isVisible ? 'block' : 'none'">
+                <div class="ospa-startboard" [style.display]="mainOscService.appConfigService.appConfig.appboard.isVisible ? 'block' : 'none'">
                     <div class="ospa-startboard-loadanimation"></div>
                     <div class="ospa-startboard-header"></div>
                     <div class="ospa-startboard-filter"></div>
                     <div class="ospa-startboard-layout">
                         <div class="ospa-flowlayout-childcontainer">
-                            <ospa-appboard></ospa-appboard>
                             <!-- Tiles -->
+                            <router-outlet></router-outlet>
                         </div>
                     </div>
                     <div class="ospa-startboard-message"></div>
@@ -63,10 +63,9 @@
                 <!-- Dynamic width, fix height layout -->
                 <div class="ospa-journey">
                     <div class="ospa-journey-breadcrumb"></div>
-                    <div class="ospa-journey-layout">
-                        <select>
-                            <!-- blades -->
-                        </select>
+                    <div class="ospa-journey-layout" style="overflow-x: auto;overflow-y: hidden;overflow-x: auto;white-space: nowrap;">
+                        <!-- blades -->
+                        <named-outlet [name]="blade.bladeId" *ngFor="let blade of mainOscService.appConfigService.appConfig.blades"></named-outlet>
                     </div>
                 </div>
             </main>

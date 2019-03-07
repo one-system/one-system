@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
+
+import { Blade } from '@one-system/one-sys-core';
 
 @Component({
-  selector: 'ospa-blade',
-  templateUrl: './blade.component.html',
-  styleUrls: ['./blade.component.css']
+    selector: 'ospa-blade',
+    templateUrl: './blade.component.html',
+    styleUrls: ['./blade.component.scss'],
 })
-export class BladeComponent implements OnInit {
+export class BladeComponent extends Blade implements OnInit {
 
-  constructor() { }
+    constructor() {
+        super('asdf', 'asdf', 'asdf', 400);
+    }
 
-  ngOnInit() {
-  }
-
+    ngOnInit() {
+    }
 }

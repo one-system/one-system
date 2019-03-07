@@ -3,22 +3,6 @@ import { TileSize } from './tile-size';
 import { TileSizes } from './tile-sizes';
 
 export class Tiles<T extends Tile> extends Array<T>  {
-    // #region Constructors
-
-    constructor(...tiles: Array<T>) {
-        super(...tiles);
-        console.log('Tiles');
-        //this.tiles = tiles;
-
-    }
-
-    static create<Apps>(): Apps {
-        let object = Object.create(Tiles.prototype);
-        return object;
-    }
-
-    // #endregion
-
     // #region Properties
 
     //tiles: Array<T> = new Array<T>();
@@ -33,12 +17,23 @@ export class Tiles<T extends Tile> extends Array<T>  {
 
     // #endregion
 
+    // #region Constructors
+
+    constructor(...tiles: Array<T>) {
+        super(...tiles);
+        //this.tiles = tiles;
+    }
+
+    static create<Apps>(): Apps {
+        let object = Object.create(Tiles.prototype);
+        return object;
+    }
+
+    // #endregion
+
     // #region Public Methods
 
     push(...tiles: Array<T>): number {
-        //console.log('tiles');
-        //console.log(tiles);
-
         tiles.forEach((tile) => {
             this.processTile(tile);
         });
@@ -47,8 +42,8 @@ export class Tiles<T extends Tile> extends Array<T>  {
     }
 
     processTile(tile: T): T {
+        return;
         //this.isTilesLoaded = true;
-        console.log(this);
         let tileSize = this.tileSizes[tile.tileSize];
         tile.size = TileSizes[tile.tileSize];  // Get CSS Name
 

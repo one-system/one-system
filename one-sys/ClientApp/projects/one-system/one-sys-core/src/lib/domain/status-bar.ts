@@ -1,14 +1,14 @@
 ﻿import { Exception } from "./exception";
 
 export class StatusBar {
-    // #region Constructors
-
-    // #endregion
-
     // #region Properties
 
     statusBar: string = '';
     statusBarClass: string = '';
+
+    // #endregion
+
+    // #region Constructors
 
     // #endregion
 

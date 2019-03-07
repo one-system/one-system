@@ -1,12 +1,12 @@
 ﻿export class ValidationResult {
-  // #region Constructors
+    // #region Properties
+
+    ErrorMessage: string;
+    MemberNames: string[];
 
   // #endregion
 
-  // #region Properties
-
-  ErrorMessage: string;
-  MemberNames: string[];
+  // #region Constructors
 
   // #endregion
 

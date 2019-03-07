@@ -1,12 +1,13 @@
-﻿import { MainService } from '../service/main/main.service';
+﻿//import { MainService } from './../../service/main/main.service';
 import { Blade } from './blade';
-import { Exception } from './exception';
+import { Exception } from './../exception';
 
 export class BladeData<T> extends Blade {
     // #region Constructors
 
-    constructor(mainService: MainService, path: string, title: string, subtitle: string = '', width: number = 300) {
-        super(mainService, path, title, subtitle, width)
+    // mainService: MainService, 
+    constructor(path: string, title: string, subtitle: string = '', width: number = 300) {
+        super(path, title, subtitle, width)
     }
 
     // #endregion
@@ -269,7 +270,6 @@ export class BladeData<T> extends Blade {
         // angularjs
         if (!this.formblade.$valid) {
             this.statusBar.setStatusBarError('Formular nicht gültig.')
-            //console.log(this.formblade);
             return false;
         }
 

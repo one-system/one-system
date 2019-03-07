@@ -1,24 +1,10 @@
-﻿import { MainService } from '../service/main/main.service';
+﻿//import { MainService } from '../service/main/main.service';
 import { UserControlBase } from './base/user-control-base';
 
 export class AreaNotification extends UserControlBase {
-    // #region Constructors
-
-    constructor(mainService: MainService) {
-        super(mainService);
-        this.mainService = mainService;
-
-        this.areaNotification = this.mainService.browserWindowService.browserWindow.document.getElementById('apa-notification-area');
-
-        this.hide();
-        //this.browserWindow.setupWindowResizeListener(() => { this.calcualteCssStyles(); });
-    }
-
-    // #endregion
-
     // #region Properties
 
-    mainService: MainService;
+    //mainService: MainService;
 
     path: string = '';
     widthAreaUsed: number = 0;
@@ -41,6 +27,21 @@ export class AreaNotification extends UserControlBase {
     set backgroundColor(value: string) {
         this._backgroundColor = value;
         this.calcualteCssStyles();
+    }
+
+    // #endregion
+
+    // #region Constructors
+
+    // mainService: MainService
+    constructor() {
+        super();
+        //this.mainService = mainService;
+
+        //this.areaNotification = this.mainService.browserWindowService.browserWindow.document.getElementById('apa-notification-area');
+
+        this.hide();
+        //this.browserWindow.setupWindowResizeListener(() => { this.calcualteCssStyles(); });
     }
 
     // #endregion
@@ -95,7 +96,7 @@ export class AreaNotification extends UserControlBase {
         this.areaNotification.style.backgroundColor = this.backgroundColor;
         this.areaNotification.style.borderLeft = '2px solid gray';
         this.areaNotification.style.width = this.width + 'px';
-        this.areaNotification.style.left = this.mainService.browserWindowService.browserWindow.innerWidth - this.width + 'px';
+        //this.areaNotification.style.left = this.mainService.browserWindowService.browserWindow.innerWidth - this.width + 'px';
 
         if (this.widthAreaUsed !== 0) {
             this.widthAreaUsed = this.width;

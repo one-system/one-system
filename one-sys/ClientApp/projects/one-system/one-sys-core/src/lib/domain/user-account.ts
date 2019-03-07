@@ -1,14 +1,4 @@
 ﻿export class UserAccount {
-    // #region Constructors
-
-    constructor(username: string, firstName: string = '', lastName: string = '') {
-        this.userName = username;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    // #endregion
-
     // #region Properties
 
     // #region firstName
@@ -46,6 +36,16 @@
 
     userName: string;
     emailAddress: string;
+
+    // #endregion
+
+    // #region Constructors
+
+    constructor(username: string, firstName: string = '', lastName: string = '') {
+        this.userName = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     // #endregion
 

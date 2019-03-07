@@ -1,6 +1,7 @@
-// #region Components
+﻿// #region Components
 
 export * from './lib/component/main/main.component';
+export * from './lib/component/dashboard/appboard/appboard.component';
 export * from './lib/component/general/page-not-found/page-not-found.component';
 
 // #endregion

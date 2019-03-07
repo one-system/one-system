@@ -1,8 +1,4 @@
 ﻿export class ExceptionDotNet {
-    // #region Constructors
-
-    // #endregion
-
     // #region Properties
 
     // .NET Exception (the following fields are transmitted over the wire)
@@ -28,6 +24,10 @@
      *  @deprecated ExceptionType is obsolete
      */
     ExceptionType: string | void;
+
+    // #endregion
+
+    // #region Constructors
 
     // #endregion
 

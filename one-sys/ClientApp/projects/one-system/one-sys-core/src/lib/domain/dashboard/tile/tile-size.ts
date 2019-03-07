@@ -1,14 +1,14 @@
 ﻿import { TileSizes } from './tile-sizes';
 
 export class TileSize {
+    // #region Properties
+
+    // #endregion
+
     // #region Constructors
 
     constructor(public tileSizes: TileSizes, public width: number, public height: number) {
     }
-
-    // #endregion
-
-    // #region Properties
 
     // #endregion
 

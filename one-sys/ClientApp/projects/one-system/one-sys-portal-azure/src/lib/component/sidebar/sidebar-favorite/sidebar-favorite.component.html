@@ -1,4 +1,4 @@
-﻿<ul class="ospa-sidebar-favorites" *ngFor="let sidebarEntry of appService.appConfigService.appConfig.sidebar">
+﻿<ul class="ospa-sidebar-favorites" *ngFor="let sidebarEntry of mainOscService.appConfigService.appConfig.sidebar">
     <li class="ospa-sidebar-item">
         <a class="ospa-sidebar-item-link" href="{{sidebarEntry.routerPath}}">
             <div class="ospa-sidebar-icon">{{sidebarEntry.iconClass}}</div>

@@ -1,23 +1,9 @@
-﻿import { MainService } from '../service/main/main.service';
+﻿//import { MainService } from '../service/main/main.service';
 import { UserControlBase } from './base/user-control-base';
-import { Blade } from './blade';
-import { BladeAddArgs } from './blade-add-args';
+import { Blade } from './blade/blade';
+import { BladeAddArgs } from './blade/blade-add-args';
 
 export class AreaBlades extends UserControlBase {
-    // #region Constructors
-
-    constructor(mainService: MainService) {
-        super(mainService);
-
-        this.portalScroll = this.mainService.browserWindowService.browserWindow.document.getElementById('apa-portal-scroll');
-
-        this.setupAddBladeListener();
-        this.setupShowHideNotificationAreaListener();
-        //this.browserWindow.setupWindowResizeListener(() => { this.setPortalScrollCss(); });
-    }
-
-    // #endregion
-
     // #region Properties
 
     private portalScroll: HTMLElement;
@@ -27,6 +13,21 @@ export class AreaBlades extends UserControlBase {
     private areaNotificationHideListener: () => void;
 
     blades: Array<Blade> = new Array<Blade>();
+
+    // #endregion
+
+    // #region Constructors
+
+    // mainService: MainService
+    constructor() {
+        super();
+
+        //this.portalScroll = this.mainService.browserWindowService.browserWindow.document.getElementById('apa-portal-scroll');
+
+        this.setupAddBladeListener();
+        this.setupShowHideNotificationAreaListener();
+        //this.browserWindow.setupWindowResizeListener(() => { this.setPortalScrollCss(); });
+    }
 
     // #endregion
 
@@ -81,16 +82,16 @@ export class AreaBlades extends UserControlBase {
 
         if (path === undefined || path === '') { return; }
 
-        if (this.mainService.browserWindowService.browserWindow !== undefined) {
-            if (this.mainService.browserWindowService.browserWindow.document === undefined) {
-                throw new Error('[AreaBlades] \'this.browserWindowService.browserWindow.document\' undefined.');
-            }
+        //if (this.mainService.browserWindowService.browserWindow !== undefined) {
+        //    if (this.mainService.browserWindowService.browserWindow.document === undefined) {
+        //        throw new Error('[AreaBlades] \'this.browserWindowService.browserWindow.document\' undefined.');
+        //    }
 
-            portalcontent = this.mainService.browserWindowService.browserWindow.document.getElementById('apa-portal-scroll');
-            if (portalcontent === null) {
-                throw new Error('[AreaBlades] HTML element with ID [apa-portal-scroll] not found. Maybe it is to early to call function \'BladeArea.addBlade\'.');
-            }
-        }
+        //    portalcontent = this.mainService.browserWindowService.browserWindow.document.getElementById('apa-portal-scroll');
+        //    if (portalcontent === null) {
+        //        throw new Error('[AreaBlades] HTML element with ID [apa-portal-scroll] not found. Maybe it is to early to call function \'BladeArea.addBlade\'.');
+        //    }
+        //}
 
         // #endregion
 
@@ -113,31 +114,32 @@ export class AreaBlades extends UserControlBase {
 
         // #region Show the blade
 
-        let blade = new Blade(this.mainService, path, '');
-        this.blades.push(blade);
+        //let blade = new Blade(this.mainService, path, '');
+        //this.blades.push(blade);
 
         // #endregion
 
         // #region Position the blade
 
-        if (this.mainService.browserWindowService.browserWindow !== undefined) {
-            this.mainService.browserWindowService.browserWindow.setTimeout(() => {
-                let azureportalblades = this.mainService.browserWindowService.browserWindow.document.getElementsByClassName('azureportalblade');
+        //if (this.mainService.browserWindowService.browserWindow !== undefined) {
+        //    this.mainService.browserWindowService.browserWindow.setTimeout(() => {
+        //        let azureportalblades = this.mainService.browserWindowService.browserWindow.document.getElementsByClassName('azureportalblade');
 
-                let i = this.blades.length - 1;
+        //        let i = this.blades.length - 1;
 
-                // HACK: Sometime azureportalblades[i].offsetLeft is undefined.
-                //       So now if it is, the user has to scroll on its own.
-                if (azureportalblades[i] !== undefined && (<any>azureportalblades[i]).offsetLeft !== undefined) {
-                    let sl = (<any>azureportalblades[i]).offsetLeft - 30;
-                    portalcontent.scrollLeft = sl;
-                }
-            }, 250);
-        }
+        //        // HACK: Sometime azureportalblades[i].offsetLeft is undefined.
+        //        //       So now if it is, the user has to scroll on its own.
+        //        if (azureportalblades[i] !== undefined && (<any>azureportalblades[i]).offsetLeft !== undefined) {
+        //            let sl = (<any>azureportalblades[i]).offsetLeft - 30;
+        //            portalcontent.scrollLeft = sl;
+        //        }
+        //    }, 250);
+        //}
 
         // #endregion
 
-        return blade;
+        //return blade;
+        return null;
     }
 
     clearAll(): void {
@@ -156,10 +158,10 @@ export class AreaBlades extends UserControlBase {
             }
         });
 
-        if (!isremoved && this.mainService.areaNotification.path === path) {
-            this.mainService.areaNotification.hide();
-            isremoved = true;
-        }
+        //if (!isremoved && this.mainService.areaNotification.path === path) {
+        //    this.mainService.areaNotification.hide();
+        //    isremoved = true;
+        //}
 
         if (!isremoved) {
             throw new Error('[AreaBlades.clearPath] path: \'' + path + '\' could not be removed, since path not found in bladeUrls.');
@@ -202,19 +204,19 @@ export class AreaBlades extends UserControlBase {
     }
 
     showPanoramaIfNoBlades() {
-        if (this.blades.length === 0) {
-            if (this.mainService.panorama !== undefined) {
-                {
-                    this.mainService.panorama.isVisible = true;
-                }
-            }
-        }
+        //if (this.blades.length === 0) {
+        //    if (this.mainService.panorama !== undefined) {
+        //        {
+        //            this.mainService.panorama.isVisible = true;
+        //        }
+        //    }
+        //}
     }
 
     hidePanorama() {
-        if (this.mainService.panorama !== undefined) {
-            this.mainService.panorama.isVisible = false;
-        }
+        //if (this.mainService.panorama !== undefined) {
+        //    this.mainService.panorama.isVisible = false;
+        //}
     }
 
     /** We need to call this when AreaBlades is no longer used, otherwise the listener does not get removed. */
@@ -230,7 +232,7 @@ export class AreaBlades extends UserControlBase {
     // #region Private Methods
 
     private setPortalScrollCss() {
-        this.portalScroll.style.marginRight = this.mainService.areaNotification.widthAreaUsed + 'px';
+        //this.portalScroll.style.marginRight = this.mainService.areaNotification.widthAreaUsed + 'px';
     }
 
     private setupShowHideNotificationAreaListener() {

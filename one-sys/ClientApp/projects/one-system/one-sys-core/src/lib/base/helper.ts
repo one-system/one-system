@@ -1,12 +1,12 @@
-export class Helper {
+﻿export class Helper {
+  // #region Properties
+
+  // #endregion
+
   // #region Constructors
 
   constructor() {
   }
-
-  // #endregion
-
-  // #region Properties
 
   // #endregion
 

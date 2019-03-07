@@ -2,14 +2,14 @@
 import { ExceptionDotNet } from './exception-dotnet';
 
 export class ExceptionDotNetEntityValidations extends ExceptionDotNet {
-    // #region Constructors
-
-    // #endregion
-
     // #region Properties
 
     Data: { key: number, value: string }[];
     ValidationResults: ValidationResult[];
+
+    // #endregion
+
+    // #region Constructors
 
     // #endregion
 

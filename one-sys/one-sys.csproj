@@ -36,7 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\projects\one-system\one-sys-core\src\lib\service\main\" />
     <Folder Include="ClientApp\projects\one-system\one-sys-portal-azure\src\lib\component\navigation\nav1\" />
     <Folder Include="ClientApp\src\app\shell\" />
   </ItemGroup>

@@ -1,42 +1,28 @@
-﻿import { MainService } from '../service/main/main.service';
-import { UserControlBase } from './base/user-control-base';
-import { StatusBar } from './status-bar';
+﻿import { Observable } from 'rxjs';
+
+import { StatusBar } from './../status-bar';
+import { UserControlBase } from './../base/user-control-base';
+
+import { BrowserService } from '../../service/browser/browser.service';
+import { InjectorService } from '../../service/injector/injector.service';
+
+import { Viewport } from '../../service/browser/viewport';
 
 export class Blade extends UserControlBase {
-    // #region Constructors
-
-    constructor(mainService: MainService, path: string, title: string, subtitle: string = '', width: number = 200) {
-        super(mainService);
-        this.vm = this;
-        this.path = path;
-        this.title = title;
-        this.subTitle = subtitle;
-        this.width.width = width + 'px';
-        this.widthStackLayout.width = width - 50 + 'px';  // 50 = padding (left and right)
-
-        if (!mainService) { throw new Error('[Blade] constructor parameter \'mainService\' must be provided.'); }
-        if (!path) { throw new Error('[Blade] constructor parameter \'path\' must be a string.'); }
-        if (!title && title !== '') { throw new Error('[Blade] constructor parameter \'title\' must be a string when provided.'); }
-        if (!subtitle && subtitle !== '') { throw new Error('[Blade] constructor parameter \'subtitle\' must be a string when provided.'); }
-        if (!width && width !== 0) { throw new Error('[Blade] constructor parameter \'width\' must be a number when provided.'); }
-
-        if (width < 50) { throw new Error('[Blade] constructor parameter \'width\' must be at least 50.'); }
-
-        // Set 'this.mainService.areaBlades.blades[index]' to 'this'
-        //     'this.mainService.areaBlades.blades[index]' was generated during AddBlade
-        this.mainService.areaBlades.blades.forEach((blade, index) => {
-            if (blade.path != null && this.path != null && blade.path.toLowerCase() === this.path.toLowerCase()) {
-                this.mainService.areaBlades.blades[index] = this;
-            }
-        });
-
-        //this.browserWindow.setupWindowResizeListener(() => { this.setBladeHeights(); });
-        this.setBladeHeights();
-    }
-
-    // #endregion
-
     // #region Properties
+
+    private browserService: BrowserService;
+    viewport: Viewport = new Viewport();
+
+    //bladeId: string = '';
+    private _bladeId: string = '';
+    get bladeId(): string {
+        return this._bladeId;
+    }
+    set bladeId(bladeId: string) {
+        if (bladeId == null) { return; }
+        this._bladeId = bladeId.toLowerCase();
+    }
 
     /** HACK: 2016-11-06/hp
     [angular-portal-blade] needs [this] as the controller.
@@ -55,8 +41,10 @@ export class Blade extends UserControlBase {
 
     title: string = '';
     subTitle: string = '';
-    width = { 'width': '0' };
+    width = '0';
     widthStackLayout = { 'width': '50px' };
+
+    height = '0';
 
     isInnerHtml: boolean = true;
 
@@ -157,6 +145,51 @@ export class Blade extends UserControlBase {
 
     // #endregion
 
+    // #region Constructors
+
+    // mainService: MainService, 
+    constructor(path: string = '', title: string = '', subtitle: string = '', width: number = 200) {
+        super();
+        this.browserService = InjectorService.getInjector().get(BrowserService);
+        this.browserService.onResize.subscribe((viewport) => this.viewport = viewport);
+
+        this.vm = this;
+        this.path = path;
+        this.title = title;
+        this.subTitle = subtitle;
+        this.width = width + 'px';
+        this.widthStackLayout.width = width - 50 + 'px';  // 50 = padding (left and right)
+
+        //if (!mainService) { throw new Error('[Blade] constructor parameter \'mainService\' must be provided.'); }
+        if (!path) { throw new Error('[Blade] constructor parameter \'path\' must be a string.'); }
+        if (!title && title !== '') { throw new Error('[Blade] constructor parameter \'title\' must be a string when provided.'); }
+        if (!subtitle && subtitle !== '') { throw new Error('[Blade] constructor parameter \'subtitle\' must be a string when provided.'); }
+        if (!width && width !== 0) { throw new Error('[Blade] constructor parameter \'width\' must be a number when provided.'); }
+
+        if (width < 50) { throw new Error('[Blade] constructor parameter \'width\' must be at least 50.'); }
+
+        // Set 'this.mainService.areaBlades.blades[index]' to 'this'
+        //     'this.mainService.areaBlades.blades[index]' was generated during AddBlade
+        //this.mainService.areaBlades.blades.forEach((blade, index) => {
+        //    if (blade.path != null && this.path != null && blade.path.toLowerCase() === this.path.toLowerCase()) {
+        //        this.mainService.areaBlades.blades[index] = this;
+        //    }
+        //});
+
+        //this.browserWindow.setupWindowResizeListener(() => { this.setBladeHeights(); });
+        this.setBladeHeights();
+    }
+
+    // #endregion
+
+    // #region Angular Methods
+
+    ngOnInit() {
+        console.log('ngOnInit');
+    }
+
+    // #endregion
+
     // #region Public Methods
 
     activate(): void {
@@ -190,11 +223,11 @@ export class Blade extends UserControlBase {
             return; // do not close blade
         }
 
-        if (this.mainService.areaBlades !== undefined) {
-            this.mainService.areaBlades.clearPath(this.path);
-        } else {
-            throw new Error('[Blade] path: \'' + this.path + '\' could not be removed, since no \'this.mainService.areaBlades\' available.');
-        }
+        //if (this.mainService.areaBlades !== undefined) {
+        //    this.mainService.areaBlades.clearPath(this.path);
+        //} else {
+        //    throw new Error('[Blade] path: \'' + this.path + '\' could not be removed, since no \'this.mainService.areaBlades\' available.');
+        //}
     }
 
     /** Override */
@@ -211,7 +244,6 @@ export class Blade extends UserControlBase {
     //            this.$scope.$on('$destroy', () => { this.watcherTitle(); });
     //        } else {
     //            // angular2
-    //            console.log('[Blade.setTitle()] not supported for angular2. use [ngOnChanges] instead.');
     //        }
     //    }
     //}
@@ -297,7 +329,7 @@ export class Blade extends UserControlBase {
     // #region Private Methods
 
     private setBladeHeights(): void {
-        this.bladeContentHeight = this.mainService.browserWindowService.browserWindow.innerHeight - 40 - 125; // 40 = topbar, 125 = blade header
+        //this.bladeContentHeight = this.mainService.browserWindowService.browserWindow.innerHeight - 40 - 125; // 40 = topbar, 125 = blade header
         this.bladeContentHeightInner = this.bladeContentHeight - 50 - 3; // 50 = padding (top and bottom), somehow we miss 3px
 
         // this.mainService.$timeout(() => {

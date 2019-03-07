@@ -1,18 +1,19 @@
-﻿import { MainService } from '../service/main/main.service';
+﻿//import { MainService } from './../../service/main/main.service';
 import { BladeData } from './blade-data';
 
 export class BladeGrid<T> extends BladeData<T> {
-    // #region Constructors
-
-    constructor(mainService: MainService, path: string, title: string, subtitle: string = '', width: number = 300) {
-        super(mainService, path, title, subtitle, width);
-    }
-
-    // #endregion
-
     // #region Properties
 
     //items: T[] = [];
+
+    // #endregion
+
+    // #region Constructors
+
+    // mainService: MainService, 
+    constructor(path: string, title: string, subtitle: string = '', width: number = 300) {
+        super(path, title, subtitle, width);
+    }
 
     // #endregion
 

@@ -1,16 +1,18 @@
 ﻿import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 
-import { AppService } from './service/app/app.service';
 import { AppConfig } from './domain/app-config';
-import { MainService } from './service/main/main.service';
+import { MainOscService } from './service/main-osc/main-osc.service';
+import { BladeService } from './service/blade/blade.service';
+import { BrowserService } from './service/browser/browser.service';
 
 @NgModule({
     imports: [],
     declarations: [],
     exports: [],
     providers: [
-        AppService,
-        MainService
+        MainOscService,
+        BladeService,
+        BrowserService
     ]
 })
 export class OneSysCoreModule {
