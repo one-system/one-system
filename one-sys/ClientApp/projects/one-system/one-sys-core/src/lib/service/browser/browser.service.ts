@@ -1,8 +1,9 @@
 ﻿// More information: https://brianflove.com/2018/01/11/angular-window-provider/
 
 import { Injectable } from '@angular/core';
+
 import { fromEvent, Observable } from 'rxjs';
-import { throttleTime, tap, merge, startWith, map, first } from 'rxjs/operators';
+import { throttleTime, startWith, map } from 'rxjs/operators';
 
 import { Viewport } from './viewport';
 import { pipe } from '@angular/core/src/render3';
@@ -25,9 +26,7 @@ export class BrowserService {
         return getWindow();
     }
 
-    windowResizeHandler: () => void;
-
-    viewport: Viewport;
+    private viewport: Viewport;
 
     onResize: Observable<Viewport>;
 
@@ -51,18 +50,6 @@ export class BrowserService {
                 //tap(viewport => console.log(viewport))
             );
     }
-
-    // #endregion
-
-    // #region Angular Methods
-
-    // #endregion
-
-    // #region Public Methods
-
-    // #endregion
-
-    // #region Private Methods
 
     // #endregion
 }

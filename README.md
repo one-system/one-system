@@ -7,8 +7,11 @@ REM RELEASE PATCH: cd projects\one-system\one-sys-portal-azure && npm version pa
 
 ## BUILD
 
-ng build @one-system/one-sys-core
-ng build @one-system/one-sys-portal-azure
+ng build @one-system/one-sys-core --watch
+ng build @one-system/one-sys-portal-azure --watch
+ng serve --ssl true --ssl-key /node_modules/browser-sync/lib/server/certs/server.key --ssl-cert /node_modules/browser-sync/lib/server/certs/server.crt
+REM ng serve
+
 REM DOES NOT WORK: ng build --prod @one-system/one-sys-core
 REM DOES NOT WORK: ng build --prod @one-system/one-sys-portal-azure
 

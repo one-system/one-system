@@ -1,24 +1,11 @@
-﻿import { BrowserService } from './browser.service';
-
-export class Viewport {
+﻿export class Viewport {
     // #region Properties
 
     browserWindowInnerHeight: number;       // provided by the browser itself
     browserWindowInnerWidth: number;        // provided by the browser itself
 
-    private fixedHeight: number = 20;       // contains the heights of all the fixed area in the browser | 20 is the scroller
+    private fixedHeight: number = 0;       // contains the heights of all the fixed area in the browser | 20 is the scroller
     dynamicHeight: number = 0;              // calculated Height (browserWindowInnerHeight - fixedHeight)
-
-    // #endregion
-
-    // #region Constructors
-
-    constructor() {
-    }
-
-    // #endregion
-
-    // #region Angular Methods
 
     // #endregion
 
@@ -43,10 +30,6 @@ export class Viewport {
         console.log(`fixedHeight: ${this.fixedHeight}`);
         console.groupEnd();
     }
-
-    // #endregion
-
-    // #region Private Methods
 
     // #endregion
 }

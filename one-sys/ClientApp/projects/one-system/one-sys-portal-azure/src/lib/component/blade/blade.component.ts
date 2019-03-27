@@ -5,6 +5,9 @@ import { Blade } from '@one-system/one-sys-core';
 @Component({
     selector: 'ospa-blade',
     templateUrl: './blade.component.html',
+    host: {
+        '[style.display]': "'inherit'"
+    },
     styleUrls: ['./blade.component.scss'],
 })
 export class BladeComponent extends Blade implements OnInit {

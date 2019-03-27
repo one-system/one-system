@@ -1,0 +1,28 @@
+﻿@import '../../style/_variables.scss';
+
+:host {
+    height: 100%;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.blade-root {
+    background-color: #dcdcdc;
+    border-right: 2px solid #fff;
+    display: inherit;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    white-space: normal;
+    width: 800px;
+}
+
+.blade-statusbar {
+    background-color: var(--blade-statusbar-background-color);
+    height: $blade-statusbar-height;
+}
+
+.blade-commands {
+    background-color: var(--blade-commands-background-color);
+    height: $blade-commands-height;
+}

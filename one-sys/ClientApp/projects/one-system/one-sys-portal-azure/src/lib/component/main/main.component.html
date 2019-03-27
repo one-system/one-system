@@ -1,4 +1,4 @@
-﻿<div class="ospa-shell">
+﻿<div class="ospa-shell" [theming]="selectedTheme">
     <div class="ospa-portal">
         <div class="ospa-topbar">
             <div class="ospa-topbar-exit-customize"></div>
@@ -9,7 +9,12 @@
                 </h1>
                 <div class="ospa-topbar-placeholder"></div>
                 <div class="ospa-topbar-search"></div>
-                <div class="ospa-topbar-buttons"></div>
+                <div class="ospa-topbar-buttons">
+                    <select (input)="setTheme($event.target.value)" class="form-control" style="margin-right:20px;">
+                        <option>black</option>
+                        <option>white</option>
+                    </select>
+                </div>
                 <div class="ospa-topbar-actionsmenu"></div>
                 <div class="ospa-topbar-avatarmenu">
                     <div class="ospa-dropmenu">
@@ -63,9 +68,9 @@
                 <!-- Dynamic width, fix height layout -->
                 <div class="ospa-journey">
                     <div class="ospa-journey-breadcrumb"></div>
-                    <div class="ospa-journey-layout" style="overflow-x: auto;overflow-y: hidden;overflow-x: auto;white-space: nowrap;">
+                    <div class="ospa-journey-layout">
                         <!-- blades -->
-                        <named-outlet [name]="blade.bladeId" *ngFor="let blade of mainOscService.appConfigService.appConfig.blades"></named-outlet>
+                        <router-outlet-named [name]="blade.bladeId" *ngFor="let blade of mainOscService.appConfigService.appConfig.blades"></router-outlet-named>
                     </div>
                 </div>
             </main>

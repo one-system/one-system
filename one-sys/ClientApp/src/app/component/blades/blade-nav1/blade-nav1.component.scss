@@ -1,1 +1,23 @@
-﻿
+﻿@import '../../../../../projects/one-system/one-sys-portal-azure/src/lib/style/_variables.scss';
+
+$menu-height: 50px;
+$footer-height: 50px;
+
+:host {
+    height: 100%;
+    /*white-space: normal;*/
+}
+
+.menu {
+    height: $menu-height;
+}
+
+.footer {
+    background-color: black;
+    height: $footer-height;
+}
+
+.scroll-vertical {
+    height: calc(100% - #{$topbar-height} - #{$footer-height} - #{$blade-header-height});
+    overflow-x: auto;
+}

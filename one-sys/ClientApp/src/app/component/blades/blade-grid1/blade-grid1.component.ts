@@ -5,6 +5,9 @@ import { MainOscService } from '@one-system/one-sys-core';
 @Component({
     selector: 'blade-grid1',
     templateUrl: './blade-grid1.component.html',
+    host: {
+        '[style.display]': "'inherit'"
+    },
     styleUrls: ['./blade-grid1.component.scss']
 })
 export class BladeGrid1Component {

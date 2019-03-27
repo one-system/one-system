@@ -1,21 +1,51 @@
 ﻿/*
-  TODO: 2018-10-18/hp: Find a way to have this stylesheet distributed with @one-system/one-sys-portal-azure
+  TODO: 2018-10-18/hp: Find a way to have this style sheet distributed with @one-system/one-sys-portal-azure
 */
+
+/*#region one-system default style */
+
 body, html {
-  height: 100%;
-  background-color: #fff;
+    background-color: #fff;
 }
 
 body, button, input, p, select, textarea {
-  font-family: az_ea_font,"Segoe UI",wf_segoe-ui_normal,"Segoe WP",Tahoma,Arial,sans-serif;
-  font-weight: 400;
+    font-family: az_ea_font,"Segoe UI",wf_segoe-ui_normal,"Segoe WP",Tahoma,Arial,sans-serif;
+    font-weight: 400;
 }
 
 body, fieldset, legend {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
+/*#endregion*/
+
+/*#region blade 100% height */
+
 body {
-  display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
+
+html, body, .ospa-shell, .ospa-portal, .ospa-portal-main, .ospa-portal-content, .ospa-journey, .ospa-journey-layout, ospa-blade {
+    height: 100%;
+}
+
+.wrap {
+    white-space: normal;
+}
+
+/*.scroll {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.scroll-horizontal {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll-vertical {
+    overflow-x: hidden;
+    overflow-y: auto;
+}*/
+
+/*#endregion*/

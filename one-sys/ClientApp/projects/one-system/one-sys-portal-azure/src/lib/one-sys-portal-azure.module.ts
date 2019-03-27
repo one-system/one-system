@@ -1,5 +1,8 @@
 ﻿import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { OneSysCoreModule } from '@one-system/one-sys-core';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -10,11 +13,11 @@ import { PageNotFoundComponent } from './component/general/page-not-found/page-n
 import { SidebarFavoriteComponent } from './component/sidebar/sidebar-favorite/sidebar-favorite.component';
 import { SplashScreenComponent } from './component/general/splash-screen/splash-screen.component';
 
-import { NamedOutletDirective } from './directive/named-outlet/namemd-outlet.direcctive';
-
 @NgModule({
     imports: [
         CommonModule,
+        FormsModule,
+        OneSysCoreModule,
         AppRoutingModule // Should be last, since it contains the ** route
     ],
     declarations: [
@@ -24,9 +27,7 @@ import { NamedOutletDirective } from './directive/named-outlet/namemd-outlet.dir
         MainComponent,
         PageNotFoundComponent,
         SidebarFavoriteComponent,
-        SplashScreenComponent,
-        // Directive
-        NamedOutletDirective
+        SplashScreenComponent
     ],
     exports: [
         MainComponent,

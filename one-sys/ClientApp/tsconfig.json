@@ -1,4 +1,4 @@
-{
+﻿{
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
@@ -29,7 +29,13 @@
       ],
       "@one-system/one-sys-portal-azure/*": [
         "dist/one-system/one-sys-portal-azure/*"
-      ]
+      ],
+      // TODO: 2019-03-22/hp: added because of issue after upgrading to core-js@3.0.0
+      //                      https://github.com/angular/angular-cli/issues/13954
+      "core-js/es7/reflect": [ "node_modules/core-js/proposals/reflect-metadata" ],
+      // TODO: 2019-03-22/hp: added because of issue after upgrading to core-js@3.0.0
+      //                      https://github.com/angular/angular-cli/issues/13954
+      "core-js/es6/*": [ "node_modules/core-js/es/*" ]
     }
   }
 }

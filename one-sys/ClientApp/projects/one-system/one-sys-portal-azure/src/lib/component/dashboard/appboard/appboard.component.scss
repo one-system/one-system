@@ -1,6 +1,4 @@
-﻿
-
-/*#region LAYOUT*/
+﻿/*#region LAYOUT*/
 
 .appboard-layout {
     padding: 40px 40px;
@@ -24,7 +22,7 @@
     margin-right: 7px;
     margin-bottom: 7px;
     cursor: pointer;
-    padding: 10px;
+    padding-top: 10px;
 }
 
 .appboard-tile:hover {
@@ -40,6 +38,12 @@
 .appboard-tile-icon {
     margin: auto;
     width: 100%;
+}
+
+@media only screen and (max-width: 540px) {
+    .appboard-tile-size-small {
+        width: 100%;
+    }
 }
 
 /*#endregion*/

@@ -6,6 +6,9 @@ import { Blade } from '@one-system/one-sys-core';
 @Component({
     selector: 'blade-nav1',
     templateUrl: './blade-nav1.component.html',
+    host: {
+        '[style.display]': "'inherit'"
+    },
     styleUrls: ['./blade-nav1.component.scss']
 })
 export class BladeNav1Component extends Blade {

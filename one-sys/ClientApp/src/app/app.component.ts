@@ -12,10 +12,10 @@ export class AppComponent implements OnInit {
     constructor(public mainOscService: MainOscService) { }
 
     ngOnInit() {
-        this.mainOscService.appConfigService.appConfig.sidebar.isVisible = false;
-        this.mainOscService.appConfigService.appConfig.sidebar.push(new SidebarEntry('My App1', 'icon1'));
-        this.mainOscService.appConfigService.appConfig.sidebar.push(new SidebarEntry('My App2', 'icon2'));
-        this.mainOscService.appConfigService.appConfig.sidebar.push(new SidebarEntry('My App3', 'icon3'));
+        //this.mainOscService.appConfigService.appConfig.sidebar.isVisible = false;
+        //this.mainOscService.appConfigService.appConfig.sidebar.push(new SidebarEntry('My App1', 'icon1'));
+        //this.mainOscService.appConfigService.appConfig.sidebar.push(new SidebarEntry('My App2', 'icon2'));
+        //this.mainOscService.appConfigService.appConfig.sidebar.push(new SidebarEntry('My App3', 'icon3'));
 
         this.mainOscService.appConfigService.appConfig.appboard.isVisible = true;
         this.mainOscService.appConfigService.appConfig.appboard.push(new AppboardEntry('My App1', 'bladenav1', 'Blade Nav 1', 'far fa-tablet', 'rgb(201, 112, 112)'));
