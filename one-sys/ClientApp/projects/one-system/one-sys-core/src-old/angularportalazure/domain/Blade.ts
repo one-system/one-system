@@ -46,8 +46,7 @@ namespace angularportalazure {
 
         // #region Properties
 
-        /** HACK: 2016-11-06/hp
-        [angular-portal-blade] needs [this] as the controller.
+        /** HACK:2016-11-06/hp: [angular-portal-blade] needs [this] as the controller.
         We don't know how to provide [this] to the directive.
         So we came up with this [vm] property.*/
         vm: any = {};

@@ -11,7 +11,7 @@ export class AppConfig {
     usernameTenant: string = 'One-System';
 
     appboard: Appboard = Appboard.create();
-    blades: Blades = Appboard.create();
+    blades: Blades = Blades.create();
     sidebar: Sidebar = Sidebar.create();
 
     // #endregion

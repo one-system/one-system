@@ -6,6 +6,7 @@ import { OneSysPortalAzureModule } from '@one-system/one-sys-portal-azure';
 import { AppConfig } from '@one-system/one-sys-core';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 
 import { BladeNav1Component } from './component/blades/blade-nav1/blade-nav1.component';
@@ -23,8 +24,8 @@ const appConfig: AppConfig = new AppConfig();
     ],
     imports: [
         BrowserModule,
-        OneSysCoreModule.forRoot(appConfig),
         AppRoutingModule,
+        OneSysCoreModule.forRoot(appConfig),
         OneSysPortalAzureModule // Should be last, since it contains the ** route
     ],
     providers: [

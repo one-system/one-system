@@ -127,7 +127,7 @@ export class AreaBlades extends UserControlBase {
 
         //        let i = this.blades.length - 1;
 
-        //        // HACK: Sometime azureportalblades[i].offsetLeft is undefined.
+        //        // HACK:2019-04-05/hp: Sometime azureportalblades[i].offsetLeft is undefined.
         //        //       So now if it is, the user has to scroll on its own.
         //        if (azureportalblades[i] !== undefined && (<any>azureportalblades[i]).offsetLeft !== undefined) {
         //            let sl = (<any>azureportalblades[i]).offsetLeft - 30;

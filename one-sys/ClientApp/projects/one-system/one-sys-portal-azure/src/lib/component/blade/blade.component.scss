@@ -22,6 +22,34 @@
     height: $blade-statusbar-height;
 }
 
+.blade-actions {
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    float: right;
+    margin-right: 22px;
+    height: 40px;
+}
+
+.blade-action-button {
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    margin: 0;
+    transition: background-color .2s ease-out;
+    height: 30px;
+    width: 30px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
 .blade-commands {
     background-color: var(--blade-commands-background-color);
     height: $blade-commands-height;

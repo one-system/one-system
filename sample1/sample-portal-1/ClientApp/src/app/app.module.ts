@@ -4,14 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { OneSysCoreModule, App, Apps, AppService, AppConfigService } from '@one-system/one-sys-core';
+import { OneSysCoreModule, App, Apps, AppService, AppConfigService, AppConfig } from '@one-system/one-sys-core';
 import { OneSysPortalAzureModule } from '@one-system/one-sys-portal-azure';
 
 import { App1Module } from 'app1';
 import { App2Module } from 'app2';
 
-let appConfig: AppConfigService=new  AppConfigService();
-let app: App = new App('app1','My App1');
+let appConfig: AppConfig = new AppConfig();
+let appConfigService: AppConfigService = new AppConfigService(appConfig);
+let app: App = new App('app1', 'My App1');
 appConfig.apps.push(app);
 
 @NgModule({

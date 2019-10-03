@@ -1,0 +1,22 @@
+<div>
+  <ng-content select="header"></ng-content>
+  <table class="azc-grid-full azc-grid-multiselectable">
+    <colgroup>
+      <col class="col0" style="width: 25px;">
+      <col class="col1">
+    </colgroup>
+    <tbody class="azc-grid-groupdata">
+      <tr *ngFor="let item of blade.items" (click)="blade.navigateTo(item.bladePath);" style="cursor:pointer" [ngStyle]="item.style">
+        <ng-template [ngIf]="item.isVisible">
+          <td class="msportalfx-gridcolumn-asseticon">
+            <i [ngClass]="item.cssClass"></i>
+          </td>
+          <td tabindex="0">
+            <a style="color:black">{{item.title}}</a>
+          </td>
+        </ng-template>
+      </tr>
+    </tbody>
+  </table>
+  <ng-content select="footer"></ng-content>
+</div>

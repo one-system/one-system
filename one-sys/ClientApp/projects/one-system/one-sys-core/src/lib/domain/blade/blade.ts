@@ -14,7 +14,7 @@ export class Blade extends UserControlBase {
     private browserService: BrowserService;
     viewport: Viewport = new Viewport();
 
-    //bladeId: string = '';
+    // bladeId: string = '';
     private _bladeId: string = '';
     get bladeId(): string {
         return this._bladeId;
@@ -24,8 +24,7 @@ export class Blade extends UserControlBase {
         this._bladeId = bladeId.toLowerCase();
     }
 
-    /** HACK: 2016-11-06/hp
-    [angular-portal-blade] needs [this] as the controller.
+    /** HACK:2016-11-06/hp: [angular-portal-blade] needs [this] as the controller.
     We don't know how to provide [this] to the directive.
     So we came up with this [vm] property.*/
     vm: any = {};
