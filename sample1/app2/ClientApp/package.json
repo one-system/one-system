@@ -23,7 +23,7 @@
     "@one-system/one-sys-core": "file:../../../one-sys/clientapp/dist/one-system/one-sys-core/one-system-one-sys-core-0.0.1.tgz",
     "@one-system/one-sys-portal-azure": "file:../../../one-sys/clientapp/dist/one-system/one-sys-portal-azure/one-system-one-sys-portal-azure-0.0.1.tgz",
     "core-js": "^2.6.5",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "rxjs": "~6.4.0",
     "zone.js": "~0.8.29"
   },
