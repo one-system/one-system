@@ -1,4 +1,6 @@
-﻿# PATCH | BUILD | PACK | PUBLISH
+﻿[![GitHub Super-Linter](https://github.com/one-system/one-system/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
+# PATCH | BUILD | PACK | PUBLISH
 
 ## PATCH
 
