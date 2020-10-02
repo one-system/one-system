@@ -16,7 +16,7 @@
     "@angular/compiler": "~7.2.6",
     "@angular/core": "~7.2.6",
     "@angular/forms": "~7.2.6",
-    "@angular/http": "~7.2.6",
+    "@angular/http": "^7.2.16",
     "@angular/platform-browser": "~7.2.6",
     "@angular/platform-browser-dynamic": "~7.2.6",
     "@angular/router": "~7.2.6",
@@ -27,7 +27,7 @@
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.6.5",
     "rxjs": "~6.4.0",
-    "web-animations-js": "^2.3.1",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
@@ -36,7 +36,7 @@
     "@angular/compiler-cli": "~7.2.6",
     "@angular/language-service": "~7.2.6",
     "@types/jasmine": "^3.3.9",
-    "@types/jasminewd2": "^2.0.6",
+    "@types/jasminewd2": "^2.0.8",
     "@types/node": "^11.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~3.3.0",
