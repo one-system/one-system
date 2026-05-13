@@ -1,0 +1,233 @@
+﻿/*@import '..\..\style\_variables.scss';*/
+$topbar-height: 40px;
+
+.ospa-topbar {
+    align-content: center;
+    align-items: center;
+    background-color: var(--topbar-background-color);
+    color: var(--topbar-color);
+    display: flex;
+    flex: 0 0 auto;
+    font-size: 100%;
+    font-weight: inherit;
+    width: 100%;
+    z-index: 5;
+}
+
+.ospa-topbar-content {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    display: -webkit-flex;
+    height: $topbar-height;
+    width: 100%;
+}
+
+.ospa-topbar-home {
+    color: var(--topbar-home-color);
+    display: inline-block;
+    font-family: az_ea_font,"Segoe UI",wf_segoe-ui_semibold,"Segoe UI Semibold","Segoe WP Semibold","Segoe WP",Tahoma,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 40px;
+    padding: 0 15px;
+}
+
+.ospa-topbar-brand {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0;
+}
+
+.ospa-topbar-placeholder {
+    flex: 1 1 auto;
+}
+
+.ospa-topbar-avatarmenu {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+}
+
+.ospa-dropmenu {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 200;
+}
+
+.ospa-dropmenu-button {
+    align-items: center;
+    background: 0 0;
+    border: none;
+    box-sizing: border-box;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    display: -webkit-flex;
+    fill: #fff;
+    font-family: az_ea_font,"Segoe UI",wf_segoe-ui_normal,"Segoe WP",Tahoma,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    justify-content: center;
+    letter-spacing: normal;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-indent: 0px;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    word-spacing: normal;
+}
+
+.ospa-avatarmenu-header {
+    align-items: center;
+    display: flex;
+    display: -webkit-flex;
+    height: 40px;
+    position: relative;
+}
+
+.ospa-avatarmenu-tenant {
+    flex: 1 1 auto;
+    padding-left: 20px;
+    text-align: right;
+}
+
+.ospa-avatarmenu-username {
+    font-size: 14px;
+    line-height: normal;
+    max-width: 146px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ospa-avatarmenu-tenant {
+    font-family: az_ea_font,"Segoe UI",wf_segoe-ui_semibold,"Segoe UI Semibold","Segoe WP Semibold","Segoe WP",Tahoma,Arial,sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 146px;
+    opacity: .9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.ospa-avatarmenu-username {
+    line-height: normal;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ospa-avatarmenu-tenant-image-container {
+    box-sizing: content-box;
+    flex: 0 0 auto;
+    height: 35px;
+    padding-left: 11px;
+    padding-right: 5px;
+    width: 35px;
+}
+
+.ospa-avatarmenu-tenant-image {
+    border: 0;
+    border-radius: 35px;
+    height: 35px;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    width: 35px;
+}
+
+.ospa-dropmenu-content {
+    display: none;
+}
+
+.ospa-sidebar {
+    box-sizing: border-box;
+    display: block;
+    font-size: 13px;
+    font-weight: inherit;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.ospa-sidebar-bar {
+    background-color: #323130;
+    color: #fff;
+    display: flex;
+    display: flex;
+    display: -webkit-flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow: hidden;
+    width: 225px;
+    width: 225px;
+}
+
+.ospa-sidebar-middle {
+    background-color: #323130;
+    color: #fff;
+    display: block;
+    flex: 1 1 auto;
+    flex: 1 1 auto;
+    font-size: 100%;
+    font-weight: inherit;
+    overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-y: auto;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+h1 {
+    display: block;
+    font-size: 100%;
+    font-weight: inherit;
+}
+
+input, textarea, select, button {
+    color: initial;
+    display: inline-block;
+    letter-spacing: normal;
+    margin: 0em;
+    text-align: start;
+    text-indent: 0px;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    word-spacing: normal;
+}
+
+/*#region THEME */
+
+/*#endregion*/
+
+/*#region LAYOUT */
+
+.ospa-journey-layout {
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: calc(100% - #{$topbar-height});
+    width: 100%;
+}
+
+.ospa-portal-content {
+    overflow: auto;
+}
+/*#endregion*/

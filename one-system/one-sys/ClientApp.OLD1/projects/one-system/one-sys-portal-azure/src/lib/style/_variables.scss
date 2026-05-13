@@ -1,0 +1,13 @@
+﻿/*#region LAYOUT */
+
+$topbar-height: 40px;
+
+$blade-statusbar-height: 20px;
+$blade-commands-height: 90px;
+$blade-header-height: calc(#{$blade-statusbar-height} + #{$blade-commands-height});
+
+/*#endregion*/
+
+/*#region THEME*/
+
+/*endregion*/

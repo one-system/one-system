@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp.OLD1\**" />
+    <Compile Remove="ClientApp.OLD2\**" />
+    <Compile Remove="ClientApp.OLD\**" />
+    <Compile Remove="ClientApp\projects\one-system\one-sys-core\src\lib\zobsolete\**" />
+    <Compile Remove="ClientApp\projects\one-system\one-sys-portal-azure\src\lib\zobsolete\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp.OLD1\**" />
+    <Content Remove="ClientApp.OLD2\**" />
+    <Content Remove="ClientApp.OLD\**" />
+    <Content Remove="ClientApp\projects\one-system\one-sys-core\src\lib\zobsolete\**" />
+    <Content Remove="ClientApp\projects\one-system\one-sys-portal-azure\src\lib\zobsolete\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="ClientApp.OLD1\**" />
+    <EmbeddedResource Remove="ClientApp.OLD2\**" />
+    <EmbeddedResource Remove="ClientApp.OLD\**" />
+    <EmbeddedResource Remove="ClientApp\projects\one-system\one-sys-core\src\lib\zobsolete\**" />
+    <EmbeddedResource Remove="ClientApp\projects\one-system\one-sys-portal-azure\src\lib\zobsolete\**" />
+    <None Remove="ClientApp.OLD1\**" />
+    <None Remove="ClientApp.OLD2\**" />
+    <None Remove="ClientApp.OLD\**" />
+    <None Remove="ClientApp\projects\one-system\one-sys-core\src\lib\zobsolete\**" />
+    <None Remove="ClientApp\projects\one-system\one-sys-portal-azure\src\lib\zobsolete\**" />
+  </ItemGroup>
+
+  <!--<Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-+- Ensure Node.js is installed -+->
+    <Exec Command="node -+-version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>-->
+
+  <!--<Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-+- As part of publishing, ensure the JS resources are freshly built in production mode -+->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -+- -+-prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -+- -+-prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-+- Include the newly-built files in the publish output -+->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>-->
+
+</Project>
